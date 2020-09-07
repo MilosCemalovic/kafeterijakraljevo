@@ -1,0 +1,29 @@
+.footer {
+  grid-column: full-start / full-end;
+  background-color: $color-grey-dark-3;
+  @include flex-nav-1;
+  padding: 4.5rem;
+
+  @media only screen and (max-width:$bp-5) {
+    grid-row: 17/ 18;
+    padding: 2rem;
+    background-color: $color-black-coffee;
+  } 
+
+  &__design {
+    color: $color-grey-light-1;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width:$bp-5) {
+      font-size: 1.2rem;
+    } 
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

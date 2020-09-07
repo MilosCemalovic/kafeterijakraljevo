@@ -1,0 +1,85 @@
+.nav {
+
+  // --text: #fffde9;
+  // --text-inverse: #333;
+  // --background: #1a0e02;
+
+  grid-column: 1 / -1;
+  // background-color: var(--background);
+  // color: var(--text);
+  background-color: $color-black-coffee;
+  color: $color-grey-light-1;
+  list-style: none;
+  @include grid-nav-3;
+  column-gap: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  transition: $transition-1;
+
+  @media only screen and (max-width:$bp-5) {
+    column-gap: 3rem;
+  }
+
+  &__item {
+
+    align-self: stretch;
+    display: grid;
+
+    h2 {
+      display: grid;
+    }
+
+  }
+
+  &__link {
+
+    display: grid;
+    align-items: center;
+    transition: $transition-2;
+    font-size: $fz-1;
+
+    @media only screen and (max-width:$bp-6) {
+      font-size: 1.2rem;
+    }
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: inherit;
+    }
+  
+    &:hover,
+    &:active {
+      color: inherit;
+    } 
+  }
+
+  // Navigation style change on scroll
+
+  &-scrolled {
+    // background-color: rgba($color-white, .9);
+    background-color: rgba($color-grey-light-1, .9);
+    box-shadow: $bx-sw-4;
+    
+    .nav__link {
+      // color: $color-black;
+      color: $color-black-coffee;
+    }
+    
+  }
+}
+
+// .nav-scrolled {
+//   // --text: #333;
+//   // --text-inverse: #f4f4f4;
+//   // --background: #f4f4f4;
+
+//   background-color: rgba($color-white, .9);
+//   box-shadow: $bx-sw-4;
+// }
+
+// .nav-scrolled .nav__link {
+//   color: $color-black;
+// }
