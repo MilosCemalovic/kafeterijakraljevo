@@ -1,0 +1,36 @@
+.par {
+  
+  line-height: $line-height-2;
+
+  &--about {
+    width: 50%;
+    font-size: 1.6rem;
+  }
+
+  &--about,
+  &--coffe {
+    text-align: center;
+    text-shadow: $text-shadow-2;
+  }
+
+  &--our-story,
+  &--content {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  &--presentation {
+    grid-column: 2/7;
+    text-align: center;
+    color: $color-grey-light-1;
+  }
+  
+  @media only screen and (max-width:$bp-5) {
+    width: 100%;
+  }
+  
+  @media only screen and (max-width:$bp-7) {
+    font-size: 1.2rem;
+  }
+
+}

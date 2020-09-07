@@ -1,0 +1,62 @@
+// .from-right,
+// .from-up,
+.from-down, 
+.from-left {
+  // transition: $transition-2;
+  opacity: 0;
+}
+
+.from-left.appear {
+  opacity: 1;
+  animation: moveInLeft-2 1.5s;
+  animation-fill-mode: backwards;
+
+  @media only screen and (max-width:$bp-5) {
+    animation: none;
+  } 
+}
+
+// .from-right.appear {
+//   animation: moveInRight 2s;
+//   opacity: 1;
+// }
+
+// .from-up.appear {
+//   animation: moveInTop 2s;
+//   opacity: 1;
+// }
+
+.from-down.appear {
+  animation: moveInBottom 1s;
+  animation-fill-mode: backwards;
+  opacity: 1;
+
+  @media only screen and (max-width:$bp-5) {
+    animation: none;
+  } 
+}
+
+.on-off {
+  opacity: 0;
+}
+
+// .on-off.appear {
+//   opacity: 1;
+//   animation: light-on-off 5s;
+//   // transition: all 2s ease-in-out;
+// }
+
+// .to-out {
+//   backdrop-filter: blur(10px);
+//   transform: scale(2);
+//   transition: transform .5s ease-in;
+
+//   @media only screen and (max-width: $bp-6) {
+//     transform: scale(1.2);
+//   }
+// }
+
+// .to-out.appear {
+//   backdrop-filter: none;
+//   transform: scale(1);
+// }
