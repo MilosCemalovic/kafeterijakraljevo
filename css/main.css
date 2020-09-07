@@ -882,23 +882,29 @@ body {
   }
 }
 
+.story__img-1, .story__img-2 {
+  display: block;
+  height: 100%;
+}
+
 .story__img-1 {
   width: 120%;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__img-1 {
+    grid-column: full-start / full-end;
+    width: 100%;
+  }
 }
 
 .story__img-2 {
   width: 100%;
 }
 
-.story__img-1, .story__img-2 {
-  display: block;
-  height: 100%;
-}
-
 @media only screen and (max-width: 51.5em) {
-  .story__img-1, .story__img-2 {
+  .story__img-2 {
     grid-column: full-start / full-end;
-    width: 100%;
   }
 }
 
