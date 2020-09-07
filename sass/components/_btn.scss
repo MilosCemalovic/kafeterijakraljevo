@@ -1,0 +1,42 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
+    background-color: $color-orange-espresso;
+    padding: 1.5rem 2.5rem;
+    transition: $transition-2;
+
+    @media only screen and (max-width:$bp-5) {
+      padding: 1.1rem 1.8rem;
+    }
+  }
+
+  &--header {
+    margin-top: 15rem;
+    box-shadow: $bx-sw-2;
+    animation: moveInBottom 2s 3s;
+    animation-fill-mode: backwards;
+
+    @media only screen and (max-width:$bp-5) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.03);
+    box-shadow: $bx-sw-5;
+  }
+
+  &:focus {
+    box-shadow: $bx-sw-2;
+    transform: scale(1);
+  }
+
+  &--presentation {
+    grid-column: 4/5;
+  }
+}

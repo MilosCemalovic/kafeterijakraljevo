@@ -1,0 +1,913 @@
+@keyframes moveInLeft-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft-2 {
+  0% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(300%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes visible {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(250%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes invisible {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes card-front {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes card-back {
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #764c29;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  display: grid;
+  grid-template-rows: 4rem 6.5rem calc(100vh - 10.5rem) repeat(2, min-content) repeat(2, 40vw) repeat(2, min-content) 35vw min-content;
+  grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+}
+
+@media only screen and (max-width: 51.5em) {
+  body {
+    grid-template-rows: 3.5rem 5rem calc(100vh - 8.5rem) repeat(3, min-content) max-content min-content max-content min-content repeat(3, max-content) repeat(3, min-content);
+  }
+}
+
+::selection {
+  background-color: #1a0e02;
+  color: #fffde9;
+}
+
+.heading-1, .heading-3, .heading-4, .heading-5 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.heading-1 {
+  font-size: 2rem;
+  color: #fffde9;
+}
+
+.heading-1__link:link, .heading-1__link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .heading-1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .heading-1 {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.heading-3 {
+  font-size: 6rem;
+  color: #fffde9;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  animation: moveInLeft-1 2s;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .heading-3 {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .heading-3 {
+    font-size: 3rem;
+  }
+}
+
+.heading-4 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .heading-4 {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .heading-4 {
+    font-size: 2rem;
+  }
+}
+
+.heading-4--header {
+  color: #1a0e02;
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+  animation: moveInRight 2s 1s;
+  animation-fill-mode: backwards;
+  margin-top: 2rem;
+}
+
+.heading-4--about {
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+}
+
+.heading-4--content {
+  margin-bottom: 3rem;
+}
+
+.heading-4--presentation {
+  grid-column: 1 / -1;
+  color: #fff;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.heading-4--contact {
+  color: #fffde9;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.heading-5 {
+  font-size: 2rem;
+}
+
+.heading-5--coffe {
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+  width: max-content;
+}
+
+.heading-5--presentation, .heading-5--contact {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: #f58322;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .heading-5--presentation {
+    font-size: 1rem;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mtb-lg {
+  margin: 5rem 0;
+}
+
+.mlr-md {
+  margin: 0 2rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  background-color: #f58322;
+  padding: 1.5rem 2.5rem;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .btn, .btn:link, .btn:visited {
+    padding: 1.1rem 1.8rem;
+  }
+}
+
+.btn--header {
+  margin-top: 15rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  animation: moveInBottom 2s 3s;
+  animation-fill-mode: backwards;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .btn--header {
+    margin-top: 2.5rem;
+  }
+}
+
+.btn:hover, .btn:active {
+  transform: scale(1.03);
+  box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.btn:focus {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+}
+
+.btn--presentation {
+  grid-column: 4/5;
+}
+
+.coffe {
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .coffe {
+    grid-template-columns: min-content;
+    justify-content: center;
+    row-gap: 5rem;
+  }
+}
+
+.coffe-box {
+  display: grid;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.coffe-box__img {
+  width: 20vw;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .coffe-box__img {
+    width: 50vw;
+  }
+}
+
+.coffe-box__about {
+  background-color: rgba(255, 253, 233, 0.5);
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  row-gap: 2rem;
+  height: 20rem;
+  padding: 1.2rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .coffe-box__about {
+    height: min-content;
+    padding: 2rem;
+  }
+}
+
+.par {
+  line-height: 1.4;
+}
+
+.par--about {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.par--about, .par--coffe {
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+}
+
+.par--our-story, .par--content {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.par--presentation {
+  grid-column: 2/7;
+  text-align: center;
+  color: #fffde9;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .par {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 30.25em) {
+  .par {
+    font-size: 1.2rem;
+  }
+}
+
+.from-down,
+.from-left {
+  opacity: 0;
+}
+
+.from-left.appear {
+  opacity: 1;
+  animation: moveInLeft-2 1.5s;
+  animation-fill-mode: backwards;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .from-left.appear {
+    animation: none;
+  }
+}
+
+.from-down.appear {
+  animation: moveInBottom 1s;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .from-down.appear {
+    animation: none;
+  }
+}
+
+.on-off {
+  opacity: 0;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  column-gap: 1rem;
+}
+
+.social__link {
+  display: flex;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.social__link:hover, .social__link:active {
+  transform: translateY(-0.2rem);
+}
+
+.social__icon, .social__cv {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .social__icon, .social__cv {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+.social__cv {
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #000;
+  font-size: .9rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .social__cv {
+    font-size: .7rem;
+  }
+}
+
+.about {
+  grid-column: full-start / full-end;
+  background-image: url(../img/kafeterija-kraljevo-item-1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  padding: 7rem 10vw;
+  row-gap: 5rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .about {
+    grid-template-rows: repeat(5, min-content);
+  }
+}
+
+.contact__1, .contact__2 {
+  grid-row: 10 / 11;
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  justify-items: start;
+  align-content: center;
+  padding-left: 8rem;
+  row-gap: 3rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .contact__1, .contact__2 {
+    padding: 5rem;
+    justify-items: center;
+  }
+}
+
+.contact__1 {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/kafeterija-kraljevo-contact.jpg);
+  background-position: left;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .contact__1 {
+    grid-row: 14 / 15;
+  }
+}
+
+.contact__2 {
+  grid-column: col-start 3 / full-end;
+  background-color: rgba(51, 51, 51, 0.7);
+}
+
+@media only screen and (max-width: 51.5em) {
+  .contact__2 {
+    grid-column: full-start / full-end;
+    grid-row: 16 / 17;
+    background-color: #1a0e02;
+  }
+}
+
+.contact__work-box {
+  display: grid;
+  row-gap: .8rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .contact__work-box {
+    justify-items: center;
+  }
+}
+
+.contact__time {
+  color: #fffde9;
+}
+
+.footer {
+  grid-column: full-start / full-end;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4.5rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .footer {
+    grid-row: 17/ 18;
+    padding: 2rem;
+    background-color: #1a0e02;
+  }
+}
+
+.footer__design {
+  color: #fffde9;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .footer__design {
+    font-size: 1.2rem;
+  }
+}
+
+.footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery__img {
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .gallery__img--1 {
+    grid-row: 11 / 12;
+  }
+}
+
+@media only screen and (max-width: 51.5em) {
+  .gallery__img--3 {
+    grid-row: 12 / 13;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 51.5em) {
+  .gallery__img--2 {
+    grid-row: 13 / 14;
+  }
+}
+
+@media only screen and (max-width: 51.5em) {
+  .gallery__img--1, .gallery__img--2, .gallery__img--3 {
+    grid-column: full-start / full-end;
+  }
+}
+
+.gallery iframe {
+  outline: none;
+  border: none;
+}
+
+.header {
+  grid-column: 1 / -1;
+  background-image: url(../img/kafeterija-kraljevo-header-1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.nav {
+  grid-column: 1 / -1;
+  background-color: #1a0e02;
+  color: #fffde9;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  align-items: center;
+  justify-content: center;
+  column-gap: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  transition: all 0.2s;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .nav {
+    column-gap: 3rem;
+  }
+}
+
+.nav__item {
+  align-self: stretch;
+  display: grid;
+}
+
+.nav__item h2 {
+  display: grid;
+}
+
+.nav__link {
+  display: grid;
+  align-items: center;
+  transition: all 0.5s;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 40em) {
+  .nav__link {
+    font-size: 1.2rem;
+  }
+}
+
+.nav__link:link, .nav__link:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.nav__link:hover, .nav__link:active {
+  color: inherit;
+}
+
+.nav-scrolled {
+  background-color: rgba(255, 253, 233, 0.9);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+}
+
+.nav-scrolled .nav__link {
+  color: #1a0e02;
+}
+
+.our-story {
+  grid-column: 1 / -1;
+  color: #fff;
+  padding: 7rem 10vw;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  align-items: start;
+  align-content: center;
+  grid-gap: 15rem;
+  position: relative;
+  height: 90vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+@media only screen and (max-width: 30.25em) {
+  .our-story {
+    grid-gap: 5rem;
+    height: 70vh;
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presentation {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  justify-items: center;
+  align-content: center;
+  row-gap: 15vh;
+  padding: 10vh 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/kafeterija-kraljevo-presentation-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .presentation {
+    grid-row: 10 / 11;
+    padding: 4rem 8vw;
+    row-gap: 5vh;
+  }
+}
+
+.presentation__icon-box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  padding: 1rem;
+  grid-row: 2 / 3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.presentation__icon-box--1 {
+  grid-column: 2 / 3;
+}
+
+.presentation__icon-box--2 {
+  grid-column: 4 / 5;
+}
+
+.presentation__icon-box--3 {
+  grid-column: 6 / 7;
+}
+
+.presentation__icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #f58322;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .presentation__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.story__content-1 {
+  grid-column: full-start / col-start 3;
+}
+
+.story__img-1 {
+  grid-column: col-start 3 / full-end;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__img-1 {
+    grid-row: 7 / 8;
+  }
+}
+
+.story__content-2 {
+  grid-column: col-start 3 / full-end;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__content-2 {
+    grid-row: 8 / 9;
+  }
+}
+
+.story__img-2 {
+  grid-column: full-start / col-start 3;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__img-2 {
+    grid-row: 9 / 10;
+  }
+}
+
+.story__content-1, .story__content-2 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  padding: 4rem 8vw;
+  background-color: rgba(255, 253, 233, 0.9);
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__content-1, .story__content-2 {
+    grid-column: full-start / full-end;
+  }
+}
+
+.story__img-1 {
+  width: 120%;
+}
+
+.story__img-2 {
+  width: 100%;
+}
+
+.story__img-1, .story__img-2 {
+  display: block;
+  height: 100%;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .story__img-1, .story__img-2 {
+    grid-column: full-start / full-end;
+    width: 100%;
+  }
+}
+
+.top {
+  grid-column: full-start / full-end;
+  background-color: #1a0e02;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+/*# sourceMappingURL=main.css.map */

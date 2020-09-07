@@ -1,0 +1,618 @@
+@mixin grid-center-1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-center-2 {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin grid-center-3 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin grid-center-4 {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+@mixin grid-center-5 {
+  display: grid;
+  align-items: center;
+}
+
+@mixin grid-center-6 {
+  display: grid;
+  justify-items: center;
+}
+
+@mixin grid-center-7 {
+  display: grid;
+  align-content: center;
+}
+
+@mixin grid-center-8 {
+  display: grid;
+  justify-content: center;
+}
+
+@mixin flex-center-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-nav-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin grid-nav-1 {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin grid-nav-2 {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin grid-nav-3 {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover-active-1 {
+  
+  transition: $transition-1;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    transform: translateY(-.2rem);
+  }
+}
+
+@mixin item-yx-hover-efect {
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $color-primary;
+    transform: scaleY(0);
+    transition: transform .2s,
+                // transform .2s,
+                width .4s cubic-bezier(1, 0, 0, 1),
+                // width .4s cubic-bezier(1, 0, 0, 1) .2s,
+                background-color .2s;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &:hover a {
+    color: $color-secondary;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@mixin link-hover-under-line {
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0.15rem;
+    background-color: $color-primary;
+    margin-top: -.15rem;
+    width: 0;
+    opacity: 0;
+    // transform-origin: left;
+    // transform: scaleX(0);
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    opacity: 1;
+    // transform: scaleX(1);
+  }
+}
+
+@mixin btn-span-hover-text-change {
+// <button class="btn">
+//   <span class="btn-invisible"><a href="#">Only 4 rooms left</a></span>
+//   <span class="btn-visible"><a href="#">Book now</a></span>
+// </button>
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  transition: $transition-1;
+  align-self: center;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-secondary, 0.8));
+  // animation: pulsate 2.5s infinite;
+
+  a:link,
+  a:visited {
+    display: grid;
+    text-decoration: none;
+    padding: 2rem 7rem;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.8), rgba($color-primary, 0.8));
+  }
+
+  &-invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: $transition-2;
+
+    // @media only screen and (max-width: $bp-3) {
+    //   animation: invisible 10s infinite 1.5s;
+    // }
+
+    a:link,
+    a:visited {
+      display: grid;
+      text-decoration: none;
+      padding: 2rem 0;
+      color: $color-white;
+    }
+  }
+
+  &-visible {
+    transition: $transition-2;
+
+    // @media only screen and (max-width: $bp-3) {
+    //   animation: visible 10s infinite 1.5s;
+    // }
+
+    a:link,
+    a:visited {
+      display: grid;
+      text-decoration: none;
+      padding: 2rem 7rem;
+      color: $color-white;
+    }
+  }
+
+  &:hover &-invisible {
+    top: 0;
+  }
+
+  &:hover &-visible {
+    transform: translateY(250%);
+  }
+}
+
+@mixin btn-or-link-outside-shadow-efect {
+// <a href="#" class="btn btn--white">Meden kuglofi</a>
+// ili 
+// <button class="btn btn--white">Meden kuglofi</button>
+  &,
+  &:link, 
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+
+    border: none;
+    cursor: pointer;
+
+    // @media only screen and (max-width: $tab-port) {
+    //   font-size: 1.2rem;
+    // }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+  
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+  &--white {
+    background-color: $color-white;
+    color: $color-primary;
+  
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}
+
+
+@mixin navigation-hamburger-menu-animated {
+  // <nav class="navigation">
+  //   <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+  //   <label for="navi-toggle" class="navigation__button">
+  //     <span class="navigation__icon">&nbsp;</span>
+  //   </label>
+
+  //   <div class="navigation__background">&nbsp;</div>
+
+  //   <ul class="navigation__list">
+
+  //     <li class="navigation__item">
+  //       <a href="#about" class="navigation__link"><span>01</span>About Natours</a>
+  //     </li>
+      
+  //     <li class="navigation__item">
+  //       <a href="#features" class="navigation__link"><span>02</span>Your benfits</a>
+  //     </li>
+      
+  //     <li class="navigation__item">
+  //       <a href="#tours" class="navigation__link"><span>03</span>Popular tours</a>
+  //     </li>
+      
+  //     <li class="navigation__item">
+  //       <a href="#story" class="navigation__link"><span>04</span>Stories</a>
+  //     </li>
+      
+  //     <li class="navigation__item">
+  //       <a href="#book" class="navigation__link"><span>05</span>Book now</a>
+  //     </li>
+
+  //   </ul>
+
+  // </nav>
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    cursor: pointer;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 900;
+    background-image: radial-gradient($color-primary, $color-secondary);
+    // transform: scale(80);
+    transition: transform 1s;
+    // transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &__list {
+    list-style: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    // left: 0;
+    z-index: 950;
+    // background-image: linear-gradient($color-green-light, $color-green-dark);
+    @include grid-center-1;
+    row-gap: 2rem;
+    opacity: 0;
+    width: 0;
+    transition: all .7s;
+    // transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-size: 220%;
+      transition: all .4s;
+
+      span {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__list {
+    opacity: 1;
+    width: 100%;
+  }
+
+  &__icon {
+    &,
+    &::before,
+    &::after {
+      height: 1.5px;
+      width: 3rem;
+      display: block;
+      background-color: $color-primary;
+    }
+    
+    &::before,
+    &::after {
+      content: "";
+      transition: all .2s;
+    }
+    
+    &::before {
+      transform: translateY(-.7rem);
+    }
+    
+    &::after {
+      transform: translateY(-1.1rem);
+    }
+  }
+
+  &__button:hover &__icon::before {
+    transform: translateY(-.95rem);
+  }
+
+  &__button:hover &__icon::after {
+    transform: translateY(-.85rem);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    // transform-origin: right;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: translateY(-1.9rem) rotate(-135deg);
+    // transform: rotate(-135deg);
+    // transform-origin: left;
+  }
+
+}
+
+
+@mixin bg-video {
+
+  // <section>
+  //   <div class="bg-video">
+  //     <video class="bg-video__content" autoplay muted loop>
+  //       <source src="img/video.mp4" type="video/mp4">
+  //       <source src="img/video.webm" type="video/webm">
+  //       Your video is not supported!
+  //     </video>
+  //   </div>
+
+  //  -- daj roditelju section class:relative; i background-image: linear-gradient(to right, rgba($color-black, .8),  rgba($color-black, .8)); --
+  // </section>
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+// POCETAK CHECKBOX ili RADIO BUTTONA
+
+@mixin checkbox-box-radio-box {
+
+// <div class="checkbox-box">
+//   <input type="checkbox" id="checkbox-1" class="checkbox checkbox--1" name="skills[]" value="html5">
+//   <label for="checkbox-1" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     HTML5
+//   </label>
+
+//   <input type="checkbox" id="checkbox-2" class="checkbox checkbox--2" name="skills[]" value="cssgrid">
+//   <label for="checkbox-2" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     CSS Grid
+//   </label>
+
+//   <input type="checkbox" id="checkbox-3" class="checkbox checkbox--3" name="skills[]" value="flexbox">
+//   <label for="checkbox-3" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     Flexbox
+//   </label>
+
+//   <input type="checkbox" id="checkbox-4" class="checkbox checkbox--4" name="skills[]" value="bem">
+//   <label for="checkbox-4" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     BEM Architecture
+//   </label>
+
+//   <input type="checkbox" id="checkbox-5" class="checkbox checkbox--5" name="skills[]" value="sass">
+//   <label for="checkbox-5" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     SASS
+//   </label>
+
+//   <input type="checkbox" id="checkbox-6" class="checkbox checkbox--6" name="skills[]" value="mvcoopphp">
+//   <label for="checkbox-6" class="label label--checkbox">
+//     <span class="label-span--checkbox"></span>
+//     MVC OOP PhP
+//   </label>
+// </div>
+
+
+// <div class="radio-box">
+//   <input type="radio" class="radio radio--1" id="radio-1" name="position" value="yes">
+//   <label for="radio-1" class="label label--radio">
+//     <span class="label-span--radio"></span>
+//     Yes
+//   </label>
+
+//   <input type="radio" class="radio radio--2" id="radio-2" name="position" value="no">
+//   <label for="radio-2" class="label label--radio">
+//     <span class="label-span--radio"></span>
+//     No
+//   </label>
+// </div>
+
+
+  display: grid;
+  grid-template-columns: min-content max-content;
+  column-gap: 8rem;
+  row-gap: 2rem;
+  font-size: 2rem;
+  font-weight: $fw-7;
+  color: $color-black;
+}
+
+@mixin checkbox-radio {
+  display: none;
+}
+
+@mixin checkbox-radio-label {
+  display: flex;
+  align-items: center;
+
+  &-span {
+
+    &--checkbox,
+    &--radio {
+
+      margin-right: 1.5rem;
+      width: 4rem;
+      height: 4rem;
+      border: .5rem solid $color-green-light;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width: $bp-7) {
+        width: 3rem;
+        height: 3rem;
+      }
+  
+      &::after {
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        background-color: $color-tirquize-dark;
+        opacity: 0;
+
+        @media only screen and (max-width: $bp-7) {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+
+    }
+
+    &--radio {
+
+      border-radius: 50%;
+  
+      &::after {
+        border-radius: 50%;
+      }
+
+      @media only screen and (max-width: $bp-7) {
+        margin-right: .8rem;
+      }
+
+    }
+
+  }
+
+}
+
+// KRAJ CHECKBOX ili RADIO BUTTONA

@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width:$bp-2) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-primary;
+  font-size: $fz-1;
+  line-height: $line-height-2;
+  display: grid;
+  grid-template-rows: 4rem 6.5rem calc(100vh - 10.5rem) repeat(2, min-content) repeat(2, 40vw) repeat(2, min-content) 35vw min-content;
+  grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+
+  @media only screen and (max-width:$bp-5) {
+    grid-template-rows: 3.5rem 5rem calc(100vh - 8.5rem) repeat(3, min-content) max-content min-content max-content min-content repeat(3, max-content) repeat(3, min-content);
+  }
+}
+
+::selection {
+  background-color: $color-black-coffee;
+  color: $color-grey-light-1;
+}
