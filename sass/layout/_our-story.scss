@@ -1,0 +1,26 @@
+.our-story {
+  grid-column: 1 / -1;
+  // background-color: rgba($color-black, .9);
+  color: $color-white;
+  padding: 7rem 10vw;
+  
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  align-items: start;
+  align-content: center;
+  grid-gap: 15rem;
+
+  position: relative;
+  height: 90vh;
+  background-image: linear-gradient(to right, rgba($color-black, .7),  rgba($color-black, .7));
+  
+  @media only screen and (max-width:$bp-7) {
+    grid-gap: 5rem;
+    height: 70vh;
+  }
+}
+
+.bg-video {
+  @include bg-video;
+}
