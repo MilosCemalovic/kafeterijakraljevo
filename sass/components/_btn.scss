@@ -8,6 +8,8 @@
     background-color: $color-orange-espresso;
     padding: 1.5rem 2.5rem;
     transition: $transition-2;
+    display: grid;
+    grid-template-columns: max-content;
 
     @media only screen and (max-width:$bp-5) {
       padding: 1.1rem 1.8rem;

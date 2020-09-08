@@ -312,6 +312,8 @@ body {
   background-color: #f58322;
   padding: 1.5rem 2.5rem;
   transition: all 0.5s;
+  display: grid;
+  grid-template-columns: max-content;
 }
 
 @media only screen and (max-width: 51.5em) {
