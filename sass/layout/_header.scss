@@ -1,6 +1,6 @@
 .header {
   grid-column: 1 / -1;
-  background-image: url(../img/kafeterija-kraljevo-header-1.jpg);
+  background-image: linear-gradient(to right, rgba($color-black-coffee, .2), rgba($color-black-coffee, .2)), url(../img/kafeterija-kraljevo-header-1.jpg);
   background-size: cover;
   background-position: bottom;
   @include grid-center-4;

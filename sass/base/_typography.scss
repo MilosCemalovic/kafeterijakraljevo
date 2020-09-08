@@ -29,7 +29,7 @@
   @extend %heading;
   font-size: 6rem;
   color: $color-grey-light-1;
-  text-shadow: $text-shadow-1;
+  // text-shadow: $text-shadow-1;
   animation: moveInLeft-1 2s;
 
   @media only screen and (max-width:$bp-5) {
@@ -58,7 +58,7 @@
 
   &--header {
     color: $color-black-coffee;
-    text-shadow: $text-shadow-2;
+    // text-shadow: $text-shadow-2;
     animation: moveInRight 2s 1s;
     animation-fill-mode: backwards;
     margin-top: 2rem;

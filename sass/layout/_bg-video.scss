@@ -1,3 +1,3 @@
-// .back-video {
-//   grid-column: full-start / full-end;
-// }
+.bg-video {
+  @include bg-video;
+}
