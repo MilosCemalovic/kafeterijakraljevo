@@ -202,7 +202,6 @@ body {
 .heading-3 {
   font-size: 6rem;
   color: #fffde9;
-  text-shadow: 0.2rem 0.2rem 0.2rem #000;
   animation: moveInLeft-1 2s;
 }
 
@@ -531,6 +530,23 @@ body {
   }
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .75;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .contact__1, .contact__2 {
   grid-row: 10 / 11;
   display: grid;
@@ -639,6 +655,10 @@ body {
   }
 }
 
+.gallery__img--3 {
+  height: 100%;
+}
+
 @media only screen and (max-width: 51.5em) {
   .gallery__img--3 {
     grid-row: 12 / 13;
@@ -665,7 +685,7 @@ body {
 
 .header {
   grid-column: 1 / -1;
-  background-image: url(../img/kafeterija-kraljevo-header-1.jpg);
+  background-image: linear-gradient(to right, rgba(26, 14, 2, 0.4), rgba(26, 14, 2, 0.4)), url(../img/kafeterija-kraljevo-header-1.jpg);
   background-size: cover;
   background-position: bottom;
   display: grid;
@@ -758,23 +778,6 @@ body {
   }
 }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: .75;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.bg-video__content {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .presentation {
   grid-column: full-start / full-end;
   display: grid;
@@ -849,6 +852,7 @@ body {
     grid-row: 7 / 8;
     grid-column: full-start / full-end;
     width: 100%;
+    height: inherit;
   }
 }
 
@@ -873,6 +877,7 @@ body {
   .story__img-2 {
     grid-column: full-start / full-end;
     grid-row: 9 / 10;
+    height: inherit;
   }
 }
 
