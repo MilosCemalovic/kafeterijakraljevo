@@ -53,7 +53,7 @@
   }
 
   @media only screen and (max-width:$bp-6) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   &--header {
@@ -80,7 +80,7 @@
 
   &--contact {
     color: $color-grey-light-1;
-    text-shadow: $text-shadow-1;
+    // text-shadow: $text-shadow-1;
   }
 }
 
