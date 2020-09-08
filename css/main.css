@@ -157,6 +157,7 @@ body {
   display: grid;
   grid-template-rows: 4rem 6.5rem calc(100vh - 10.5rem) repeat(2, min-content) repeat(2, 40vw) repeat(2, min-content) 35vw min-content;
   grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 51.5em) {
