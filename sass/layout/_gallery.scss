@@ -33,8 +33,8 @@
     &--1,
     &--2,
     &--3 {
-      @media only screen and (max-width:$bp-5) {
-        grid-column: full-start / full-end;
+      @media only screen and (max-width: $bp-5) {
+        grid-column: 1 / -1;
       }
     }
 
