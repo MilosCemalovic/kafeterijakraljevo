@@ -166,7 +166,7 @@ body {
 }
 
 ::selection {
-  background-color: #1a0e02;
+  background-color: #f58322;
   color: #fffde9;
 }
 
@@ -380,7 +380,7 @@ body {
 }
 
 .coffe-box__about {
-  background-color: rgba(255, 253, 233, 0.5);
+  background-color: rgba(255, 253, 233, 0.8);
   display: grid;
   grid-template-rows: repeat(2, min-content);
   justify-items: center;
@@ -516,7 +516,7 @@ body {
   grid-column: full-start / full-end;
   background-image: url(../img/kafeterija-kraljevo-item-1.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: grid;
   grid-template-rows: repeat(3, min-content);
   justify-items: center;
