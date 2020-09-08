@@ -674,7 +674,7 @@ body {
 
 @media only screen and (max-width: 51.5em) {
   .gallery__img--1, .gallery__img--2, .gallery__img--3 {
-    grid-column: full-start / full-end;
+    grid-column: 1 / -1;
   }
 }
 
