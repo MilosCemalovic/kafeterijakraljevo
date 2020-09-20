@@ -1,5 +1,5 @@
 # kafeterijakraljevo
-Project contains Advance CSS, BEM Architecture, SASS, CSS Grid, CSS Flexbox, CSS animatios, SVG icons, Intersection Observer, Smooth Scroll and HTML5. 
+Project contains Advance CSS, BEM Architecture, SASS, CSS Grid, CSS Flexbox, CSS animatios, Background video, SVG icons, Intersection Observer, Smooth Scroll and HTML5. Check out MVC OOP PhP version on my GitHub profile.
 
 Check out MVC OOP PhP version on my GitHub profile.
 
