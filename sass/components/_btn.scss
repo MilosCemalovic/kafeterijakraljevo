@@ -10,6 +10,7 @@
     transition: $transition-2;
     display: grid;
     grid-template-columns: max-content;
+    // box-shadow: $bx-sw-2;
 
     @media only screen and (max-width:$bp-5) {
       padding: 1.1rem 1.8rem;
@@ -18,7 +19,6 @@
 
   &--header {
     margin-top: 15rem;
-    box-shadow: $bx-sw-2;
     animation: moveInBottom 2s 3s;
     animation-fill-mode: backwards;
 
@@ -30,11 +30,11 @@
   &:hover,
   &:active {
     transform: scale(1.03);
-    box-shadow: $bx-sw-5;
+    box-shadow: $bx-sw-2;
   }
 
   &:focus {
-    box-shadow: $bx-sw-2;
+    box-shadow: $bx-sw-3;
     transform: scale(1);
   }
 
