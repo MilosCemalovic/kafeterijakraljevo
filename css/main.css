@@ -324,7 +324,6 @@ body {
 
 .btn--header {
   margin-top: 15rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   animation: moveInBottom 2s 3s;
   animation-fill-mode: backwards;
 }
@@ -337,11 +336,11 @@ body {
 
 .btn:hover, .btn:active {
   transform: scale(1.03);
-  box-shadow: 0 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .btn:focus {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: scale(1);
 }
 
