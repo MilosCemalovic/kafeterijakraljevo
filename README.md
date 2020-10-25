@@ -1,17 +1,43 @@
 # kafeterijakraljevo
-Project contains Advance CSS, BEM Architecture, SASS, CSS Grid, CSS Flexbox, CSS animatios, Background video, SVG icons, Intersection Observer, Smooth Scroll and HTML5. Check out MVC OOP PhP version on my GitHub profile.
-
-Check out MVC OOP PhP version on my GitHub profile.
-
-Projekat je radjen sa naprednim CSS tehnikama:
-
-- BEM Architecture (BEM Methodology)
+Project contains
 - SASS
 - Advance CSS
 - CSS Grid
 - CSS Flexbox
 - HTML5
+- PHP
 
-Korisceni razni tagovi u naslovu i imenima fotografija radi boljeg SEO.
+using:
+- BEM Architecture (Block, Element, Modifier)
+- DRY Methodology (Don't Repeat Yourslef)
+- Clean & Reusable code
+- SVG / sprite.svg
+- Intersection Observer
+- Smooth Scroll
+- Object Oriented Programming
+- MVC Architecture
 
-Koriscene svg ikonice i sprite.svg umesto .jpg i .png radi brzeg ucitavanja sajta.
+Check out MVC OOP PhP version on my GitHub profile.
+
+---------------------------------------------------
+
+Projekat je rađen tehnologijama:
+
+- SASS
+- Advance CSS
+- CSS Grid
+- CSS Flexbox
+- HTML5
+- PHP
+
+koristeći:
+- BEM Architecture (Block, Element, Modifier)
+- DRY Methodology (Don't Repeat Yourslef)
+- Clean & Reusable code
+- SVG / sprite.svg
+- Intersection Observer
+- Smooth Scroll
+- Object Oriented Programming
+- MVC Architecture
+
+Korišćeni su tagovi u naslovu i fotografijama radi boljeg SEO, kompresovani video, kao i sprite.svg radi bržeg učitavanja sajta.
