@@ -1,12 +1,5 @@
 .nav {
-
-  // --text: #fffde9;
-  // --text-inverse: #333;
-  // --background: #1a0e02;
-
   grid-column: 1 / -1;
-  // background-color: var(--background);
-  // color: var(--text);
   background-color: $color-black-coffee;
   color: $color-grey-light-1;
   list-style: none;
@@ -52,7 +45,7 @@
   
     &:hover,
     &:active {
-      color: inherit;
+      color: $color-orange-espresso;
     } 
   }
 
@@ -64,8 +57,12 @@
     box-shadow: $bx-sw-4;
     
     .nav__link {
-      // color: $color-black;
       color: $color-black-coffee;
+  
+      &:hover,
+      &:active {
+        color: $color-orange-espresso;
+      } 
     }
     
   }

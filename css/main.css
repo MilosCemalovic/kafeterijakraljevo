@@ -171,49 +171,26 @@ body {
   color: #fffde9;
 }
 
-.heading-1, .heading-3, .heading-4, .heading-5 {
+.heading-1, .heading-4, .heading-5 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
 
 .heading-1 {
-  font-size: 2rem;
-  color: #fffde9;
-}
-
-.heading-1__link:link, .heading-1__link:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media only screen and (max-width: 51.5em) {
-  .heading-1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-width: 40em) {
-  .heading-1 {
-    font-size: 1rem;
-    letter-spacing: 0.2rem;
-  }
-}
-
-.heading-3 {
   font-size: 6rem;
   color: #fffde9;
   animation: moveInLeft-1 2s;
 }
 
 @media only screen and (max-width: 51.5em) {
-  .heading-3 {
+  .heading-1 {
     font-size: 4.5rem;
   }
 }
 
 @media only screen and (max-width: 40em) {
-  .heading-3 {
+  .heading-1 {
     font-size: 3rem;
   }
 }
@@ -259,6 +236,12 @@ body {
   text-shadow: 0.2rem 0.2rem 0.2rem #000;
 }
 
+@media only screen and (max-width: 51.5em) {
+  .heading-4--presentation {
+    font-size: 1.4rem;
+  }
+}
+
 .heading-4--contact {
   color: #fffde9;
 }
@@ -282,6 +265,44 @@ body {
 @media only screen and (max-width: 51.5em) {
   .heading-5--presentation {
     font-size: 1rem;
+  }
+}
+
+.par {
+  line-height: 1.4;
+}
+
+.par--about {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.par--about, .par--coffe {
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+}
+
+.par--our-story, .par--content {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.par--presentation {
+  grid-column: 2/7;
+  text-align: center;
+  color: #fffde9;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 51.5em) {
+  .par--presentation {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 51.5em) {
+  .par {
+    width: 100%;
   }
 }
 
@@ -397,34 +418,25 @@ body {
   }
 }
 
-.par {
-  line-height: 1.4;
+.logo {
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-.par--about {
-  width: 50%;
-  font-size: 1.6rem;
+.logo:hover, .logo:active {
+  transform: translateY(-0.2rem);
 }
 
-.par--about, .par--coffe {
-  text-align: center;
-  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
-}
-
-.par--our-story, .par--content {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.par--presentation {
-  grid-column: 2/7;
-  text-align: center;
-  color: #fffde9;
+.logo img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
 }
 
 @media only screen and (max-width: 51.5em) {
-  .par {
-    width: 100%;
+  .logo img {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }
 
@@ -462,48 +474,23 @@ body {
 }
 
 .social {
-  display: grid;
-  grid-template-columns: repeat(5, min-content);
-  column-gap: 1rem;
-}
-
-.social__link {
-  display: flex;
   transition: all 0.2s;
   cursor: pointer;
 }
 
-.social__link:hover, .social__link:active {
+.social:hover, .social:active {
   transform: translateY(-0.2rem);
 }
 
-.social__icon, .social__cv {
+.social__icon {
   width: 2rem;
   height: 2rem;
 }
 
 @media only screen and (max-width: 51.5em) {
-  .social__icon, .social__cv {
+  .social__icon {
     width: 1.7rem;
     height: 1.7rem;
-  }
-}
-
-.social__cv {
-  background-color: #fff;
-  text-decoration: none;
-  border-radius: 50%;
-  color: #000;
-  font-size: .9rem;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-}
-
-@media only screen and (max-width: 51.5em) {
-  .social__cv {
-    font-size: .7rem;
   }
 }
 
@@ -597,7 +584,9 @@ body {
 }
 
 .contact__time {
+  text-decoration: none;
   color: #fffde9;
+  font-style: normal;
 }
 
 .footer {
@@ -739,7 +728,7 @@ body {
 }
 
 .nav__link:hover, .nav__link:active {
-  color: inherit;
+  color: #f58322;
 }
 
 .nav-scrolled {
@@ -749,6 +738,10 @@ body {
 
 .nav-scrolled .nav__link {
   color: #1a0e02;
+}
+
+.nav-scrolled .nav__link:hover, .nav-scrolled .nav__link:active {
+  color: #f58322;
 }
 
 .our-story {
@@ -803,7 +796,6 @@ body {
   row-gap: 1rem;
   padding: 1rem;
   grid-row: 2 / 3;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .presentation__icon-box--1 {
@@ -897,6 +889,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -47,6 +47,8 @@
   }
 
   &__time {
+    text-decoration: none;
     color: $color-grey-light-1;
+    font-style: normal;
   }
 }
