@@ -191,11 +191,29 @@ body {
 
 @media only screen and (max-width: 40em) {
   .heading-1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
-.heading-4 {
+.heading-3 {
+  color: #fffde9;
+  @media only screen and (max-width: 51.5em) {
+    .heading-1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.heading-3--header {
+  color: #1a0e02;
+  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+  animation: moveInRight 2s 1s;
+  animation-fill-mode: backwards;
+  margin-top: 2rem;
+}
+
+.heading-4,
+.heading-3 {
   font-size: 3.5rem;
   line-height: 1;
 }
@@ -212,14 +230,6 @@ body {
   .heading-4 {
     font-size: 2.2rem;
   }
-}
-
-.heading-4--header {
-  color: #1a0e02;
-  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
-  animation: moveInRight 2s 1s;
-  animation-fill-mode: backwards;
-  margin-top: 2rem;
 }
 
 .heading-4--about {
@@ -683,7 +693,7 @@ body {
   color: #fffde9;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(6, max-content);
+  grid-template-columns: repeat(5, max-content);
   align-items: center;
   justify-content: center;
   column-gap: 5rem;
