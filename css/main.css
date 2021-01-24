@@ -205,8 +205,7 @@ body {
 }
 
 .heading-3--header {
-  color: #1a0e02;
-  text-shadow: 0.2rem 0.2rem 0.2rem #fff;
+  color: #fff;
   animation: moveInRight 2s 1s;
   animation-fill-mode: backwards;
   margin-top: 2rem;
