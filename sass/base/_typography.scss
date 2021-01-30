@@ -72,6 +72,7 @@
     animation: moveInRight 2s 1s;
     animation-fill-mode: backwards;
     margin-top: 2rem;
+    color: $color-grey-light-1;
 
     @media only screen and (max-width: $bp-5) {
       font-size: 1.7rem;
