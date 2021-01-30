@@ -52,9 +52,7 @@
   // Navigation style change on scroll
 
   &-scrolled {
-    // background-color: rgba($color-white, .9);
     background-color: rgba($color-grey-light-1, .9);
-    box-shadow: $bx-sw-4;
     
     .nav__link {
       color: $color-black-coffee;
@@ -67,16 +65,3 @@
     
   }
 }
-
-// .nav-scrolled {
-//   // --text: #333;
-//   // --text-inverse: #f4f4f4;
-//   // --background: #f4f4f4;
-
-//   background-color: rgba($color-white, .9);
-//   box-shadow: $bx-sw-4;
-// }
-
-// .nav-scrolled .nav__link {
-//   color: $color-black;
-// }

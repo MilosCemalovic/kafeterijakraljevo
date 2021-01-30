@@ -6,13 +6,13 @@
     color: $color-white;
     text-decoration: none;
     background-color: $color-orange-espresso;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2rem;
     transition: $transition-2;
     display: grid;
     grid-template-columns: max-content;
 
     @media only screen and (max-width:$bp-5) {
-      padding: 1.1rem 1.8rem;
+      padding: .9rem 1.8rem;
     }
   }
 
@@ -20,10 +20,6 @@
     margin-top: 15rem;
     animation: moveInBottom 2s 3s;
     animation-fill-mode: backwards;
-
-    @media only screen and (max-width:$bp-5) {
-      margin-top: 2.5rem;
-    }
   }
 
   &:hover,

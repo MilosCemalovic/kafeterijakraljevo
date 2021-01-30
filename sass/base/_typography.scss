@@ -1,5 +1,5 @@
 %heading {
-  font-family: $font-secondary;
+  font-family: $font-primary;
   text-transform: uppercase;
   letter-spacing: $letter-spacing-3;
 }
@@ -10,11 +10,11 @@
   color: $color-grey-light-1;
   animation: moveInLeft-1 2s;
 
-  @media only screen and (max-width:$bp-5) {
+  @media only screen and (max-width: $bp-5) {
     font-size: 4.5rem;
   }
 
-  @media only screen and (max-width:$bp-6) {
+  @media only screen and (max-width: $bp-6) {
     font-size: 3rem;
   }
 }
@@ -24,26 +24,21 @@
   font-size: 3.5rem;
   line-height: $line-height-1;
 
-  @media only screen and (max-width:$bp-5) {
+  @media only screen and (max-width: $bp-5) {
     font-size: 2.5rem;
     text-align: center;
     line-height: $line-height-2;
   }
 
-  @media only screen and (max-width:$bp-6) {
+  @media only screen and (max-width: $bp-6) {
     font-size: 2.2rem;
   }
 
   &--header {
     color: $color-black-coffee;
-    text-shadow: $text-shadow-2;
     animation: moveInRight 2s 1s;
     animation-fill-mode: backwards;
     margin-top: 2rem;
-  }
-
-  &--about {
-    text-shadow: $text-shadow-2;
   }
 
   &--content {
@@ -53,7 +48,6 @@
   &--presentation {
     grid-column: 1 / -1;
     color: $color-white;
-    text-shadow: $text-shadow-1;
 
     @media only screen and (max-width:$bp-5) {
       font-size: $fz-1;
@@ -65,12 +59,63 @@
   }
 }
 
+.heading-4,
+.heading-3 {
+  font-family: $font-primary;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.heading-3 {
+
+  &--header {
+    animation: moveInRight 2s 1s;
+    animation-fill-mode: backwards;
+    margin-top: 2rem;
+
+    @media only screen and (max-width: $bp-5) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.heading-4 {
+
+  &--contact {
+    color: $color-grey-light-1;
+  }
+
+  &--content {
+    margin-bottom: 3rem;
+  }
+
+  &--presentation {
+    grid-column: 1 / -1;
+    color: $color-grey-light-1;
+    font-weight: $fw-4;
+  }
+
+  &--contact {
+    color: $color-grey-light-1;
+  }
+
+  @media only screen and (max-width: $bp-5) {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  @media only screen and (max-width: $bp-6) {
+    font-size: 2.2rem;
+  }
+}
+
+
 .heading-5 {
   @extend %heading;
   font-size: 2rem;
 
   &--coffe {
-    text-shadow: $text-shadow-2;
     width: max-content;
   }
 
@@ -80,7 +125,6 @@
     letter-spacing: $letter-spacing-1;
     color: $color-orange-espresso;
     line-height: $line-height-1;
-    // text-shadow: $text-shadow-3;
   }
 
   &--presentation {
@@ -102,7 +146,6 @@
   &--about,
   &--coffe {
     text-align: center;
-    text-shadow: $text-shadow-2;
   }
 
   &--our-story,
