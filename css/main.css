@@ -187,7 +187,11 @@ body {
   }
 }
 
-.heading-4--contact {
+.heading-4--about, .heading-4--content {
+  color: #764c29;
+}
+
+.heading-4--our-story, .heading-4--presentation, .heading-4--contact {
   color: #fffde9;
 }
 
@@ -197,12 +201,7 @@ body {
 
 .heading-4--presentation {
   grid-column: 1 / -1;
-  color: #fffde9;
   font-weight: 400;
-}
-
-.heading-4--contact {
-  color: #fffde9;
 }
 
 @media only screen and (max-width: 51.5em) {
@@ -221,16 +220,17 @@ body {
 
 .heading-5 {
   font-size: 2rem;
+  color: #f58322;
 }
 
 .heading-5--coffe {
   width: max-content;
+  color: #764c29;
 }
 
 .heading-5--presentation, .heading-5--contact {
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
-  color: #f58322;
   line-height: 1;
 }
 
@@ -242,6 +242,7 @@ body {
 
 .par {
   line-height: 1.4;
+  color: #764c29;
 }
 
 .par--about {
@@ -253,6 +254,10 @@ body {
   text-align: center;
 }
 
+.par--our-story, .par--presentation {
+  color: #fffde9;
+}
+
 .par--our-story, .par--content {
   text-align: center;
   margin-bottom: 5rem;
@@ -261,7 +266,6 @@ body {
 .par--presentation {
   grid-column: 2/7;
   text-align: center;
-  color: #fffde9;
   font-size: 2rem;
 }
 
@@ -741,7 +745,7 @@ body {
   align-content: center;
   row-gap: 15vh;
   padding: 10vh 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/kafeterija-kraljevo-presentation-1.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/kafeterija-kraljevo-presentation-1.jpg);
   background-position: center;
   background-size: cover;
 }
